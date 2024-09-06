@@ -8,6 +8,6 @@ class BasePage():
     def is_element_present(self, how, what): # Создали новый метод, который будет перехватывать исключения. Передаём в него два аргумента (как искать - css, id, xpath и т.д.; и что искать - строку-селектор)
         try:
             self.browser.find_element(how, what)
-        except NoSuchElementException: # Тут указываем имя исключения
+        except Exception: # Тут указываем имя исключения
             return False
         return True
